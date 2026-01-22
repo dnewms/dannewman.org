@@ -9,6 +9,18 @@ I found two caterpillars on a single milkweed, and fearing for the low northern 
 
 The webcam ran for about two weeks, capturing the full metamorphosis from hungry caterpillar to chrysalis to butterfly. It was one of those projects that started as a joke and turned into something genuinely fascinating to watch.
 
+![Caterpillar stage](/assets/images/wp/2017/09/cam_1_20170905_083156_458.jpg)
+
+![Chrysalis formation](/assets/images/wp/2017/09/cam_1_20170905_093156_598.jpg)
+
+![Completed chrysalis](/assets/images/wp/2017/09/cam_1_20170905_103156_722.jpg)
+
 The caterpillars were voracious — they could strip a milkweed leaf in a matter of hours. And the moment of chrysalis formation was surprisingly fast. One minute you have a caterpillar hanging in a J-shape, the next you have a jade-green case with gold dots.
+
+![Chrysalis with gold seam](/assets/images/wp/2017/10/DSC03518-e1507332708125.jpg)
+
+![Butterfly drying wings](/assets/images/wp/2017/10/DSC03526.jpg)
+
+![Butterfly on plant](/assets/images/wp/2017/10/DSC03531-e1507332748966.jpg)
 
 If you've never watched a monarch emerge from its chrysalis, I highly recommend it. The whole process takes about 10-15 minutes, and there's something almost magical about watching the crumpled, wet wings slowly expand and dry.

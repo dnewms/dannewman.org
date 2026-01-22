@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Median Rents in Michigan</title>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <style>
+        #map { width: 50%; margin: 0 auto; }
+        body { font: 12px sans-serif; }
+        path { stroke-width: 0.25px; stroke: white; fill: #999; cursor: pointer; }
+        path.q0-11 { fill: #313695; }
+        path.q1-11 { fill: #4575b4; }
+        path.q2-11 { fill: #74add1; }
+        path.q3-11 { fill: #abd9e9; }
+        path.q4-11 { fill: #e0f3f8; }
+        path.q5-11 { fill: #ffffbf; }
+        path.q6-11 { fill: #fee090; }
+        path.q7-11 { fill: #fdae61; }
+        path.q8-11 { fill: #f46d43; }
+        path.q9-11 { fill: #d73027; }
+        path.q10-11 { fill: #a50026; }
+        div.tooltip { position: absolute; background-color: white; border: 1px solid black;
+                     color: black; font-weight: bold; padding: 4px 8px; display: none; }
+        .infotitle { width: 50%; margin: 5px auto; }
+        .intro { width: 50%; margin: 5px auto; }
+        .blue { color: #fff; background-color: rgb(49, 54, 149); padding: 5px; }
+        .red { color: #fff; background-color: rgb(165, 0, 38); padding: 5px; }
+        .key { font-size: 90%; }
+        .key-img { vertical-align: middle; }
+        .tiptext { font-weight: normal; }
+        .standout { float: right; }
+        .unemp { float: right; width: 50%; margin: 0 auto; }
+        .footer { font-style: italic; }
+    </style>
+</head>
+<body>
+    <h1>Median Rents in Michigan</h1>
+    <h2>Median Rents in Michigan, 2014</h2>
+
+    <img src="apt.png" alt="Apartment by Nicholas Menghini from the Noun Project">
+
+    <p>data from <a href="http://factfinder.census.gov">2014 American Community Survey</a>,
+    United States Census Bureau</p>
+
+    <div class="intro">
+        <p>Contemporary urban housing challenges involve finding affordable accommodations
+        in desirable locations. Rent variations across short distances can be substantial.
+        The following interactive map displays median rents organized by
+        <a href="https://en.wikipedia.org/wiki/ZIP_Code_Tabulation_Area">ZCTAs</a>.</p>
+
+        <p><strong>Key:</strong> less expensive <img src="key.png" alt="color scale">
+        more expensive</p>
+    </div>
+
+    <div id="map"></div>
+
+    <div class="infotitle">
+        <h3>Notable rent disparities</h3>
+        <ul>
+            <li><a href="https://en.wikipedia.org/wiki/West_Bloomfield_Township,_Michigan">
+            West Bloomfield</a> (48323): $1583
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Pontiac,_Michigan">Pontiac</a>
+                    (48302): $831</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Orchard_Lake_Village,_Michigan">
+                    Orchard Lake</a> (48324): $872</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Walled_Lake,_Michigan">Walled Lake</a>
+                    (48390): $848</li>
+                </ul>
+            </li>
+            <li><a href="https://en.wikipedia.org/wiki/Novi,_Michigan">Novi</a> (48374): $1387
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/South_Lyon,_Michigan">South Lyon</a>
+                    (48178): $696</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Wixom,_Michigan">Wixom</a>
+                    (48393): $570</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Northville,_Michigan">Northville</a>
+                    (48167): $882</li>
+                </ul>
+            </li>
+            <li><a href="https://en.wikipedia.org/wiki/Ada_Township%2C_Michigan">Ada</a> (49301): $1149
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Grand_Rapids,_Michigan">Grand Rapids</a>
+                    (49546): $702</li>
+                    <li>North Grand Rapids (49525): $659</li>
+                    <li><a href="https://en.wikipedia.org/wiki/Plainfield_Township,_Kent_County,_Michigan">
+                    Belmont</a> (49306): $508</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="infotitle">
+        <h3>Michigan's unique situation</h3>
+        <p>Michigan differs from other states in that top rents often occur in suburban
+        centers rather than urban cores, affecting both Detroit and Grand Rapids. University
+        towns show moderate rents, possibly constrained by student purchasing capacity.</p>
+    </div>
+
+    <div class="infotitle">
+        <h3>Unemployment correlation</h3>
+        <p>The unemployment map reveals a correlation between lower rents and higher
+        joblessness. The Upper Peninsula exhibits low rents alongside spotty employment,
+        while Detroit and northeast Michigan follow similar patterns.</p>
+    </div>
+
+    <p class="footer">For creation methodology, <a href="/blog/2016/04/25/creating-a-choropleth-using-census-data.html">see here</a>.</p>
+
+    <script>
+        var width = 800, height = 800;
+        var projection = d3.geo.conicEqualArea()
+            .scale(7756.345706925912)
+            .center([-85.37747817845144, 44.32942454554112])
+            .parallels([41.696118000000006, 47.484125])
+            .rotate([85.37747817845144])
+            .translate([-6346.46430489868, -3495.902300038154]);
+
+        var path = d3.geo.path().projection(projection);
+        var svg = d3.select("#map").append("svg")
+            .attr("width", width)
+            .attr("height", height);
+
+        var features = svg.append("g").attr("class", "features");
+        var color = d3.scale.quantize()
+            .domain([133, 1688])
+            .range(d3.range(11).map(function(i) { return "q" + i + "-11"; }));
+
+        var zoom = d3.behavior.zoom()
+            .scaleExtent([1, Infinity])
+            .on("zoom", zoomed);
+        svg.call(zoom);
+
+        var tooltip = d3.select("#map").append("div").attr("class", "tooltip");
+
+        d3.json("unemp.topojson", function(error, geodata) {
+            if (error) return console.log(error);
+            features.selectAll("path")
+                .data(topojson.feature(geodata, geodata.objects.unemp).features)
+                .enter()
+                .append("path")
+                .attr("d", path)
+                .attr("class", function(d) {
+                    return (typeof color(d.properties.data_HD01_) == "string" ?
+                            color(d.properties.data_HD01_) : "");
+                })
+                .on("mouseover", showTooltip)
+                .on("mousemove", moveTooltip)
+                .on("mouseout", hideTooltip)
+                .on("click", clicked);
+        });
+
+        function clicked(d, i) { }
+
+        function zoomed() {
+            features.attr("transform", "translate(" + zoom.translate() + ")scale(" +
+                         zoom.scale() + ")")
+                .selectAll("path").style("stroke-width", 0.25 / zoom.scale() + "px");
+        }
+
+        var tooltipOffset = {x: 5, y: -25};
+
+        function showTooltip(d) {
+            moveTooltip();
+            var rentText = d.properties.data_HD01_ === "" ? "No data" :
+                          "$" + d.properties.data_HD01_;
+            var unempText = d.properties.UnempHC04_ === "" || d.properties.UnempHC04_ == null ?
+                           "No data" : d.properties.UnempHC04_ + "%";
+
+            tooltip.style("display", "block")
+                .html("Rent: <span class='tiptext'>" + rentText + "</span><br>ZIP: " +
+                      "<span class='tiptext'>" + d.properties.ZCTA5CE10 + "</span><br>" +
+                      "Unemployment: <span class='tiptext'>" + unempText + "</span>");
+        }
+
+        function moveTooltip() {
+            tooltip.style("top", (d3.event.pageY + tooltipOffset.y) + "px")
+                .style("left", (d3.event.pageX + tooltipOffset.x) + "px");
+        }
+
+        function hideTooltip() {
+            tooltip.style("display", "none");
+        }
+    </script>
+</body>
+</html>

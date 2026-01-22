@@ -4,7 +4,7 @@ title: "Creating a Choropleth Using Census Data"
 date: 2016-04-25 18:55:27
 ---
 
-I recently put together an interactive choropleth of Michigan using American Community Survey (ACS) data from the U.S. Census. It looks like this (click on it or here for the actual interactive version):
+I recently put together an [interactive choropleth of Michigan](/MIrents.html) using American Community Survey (ACS) data from the U.S. Census. It looks like this (click on it or [here](/MIrents.html) for the actual interactive version):
 
 Here are the steps to create a similar map. Please let me know if there are easier ways:
 
