@@ -6,7 +6,7 @@ date: 2015-03-20 19:28:30
 
 In the upper-left corner of the contiguous United States, beaches are carved out by the relentless tide. One such beach, Shi Shi, is located in the Olympic Wilderness. However, it takes a few more permits than the typical trip to uninhabited land.
 
-[![ShiShiBeach](/assets/images/wp/2015/03/IMG_2640-1024x283.jpg)](https://dannewman.org/wp-content/uploads/2015/03/IMG_2640.jpg)
+[![ShiShiBeach](/dannewman.org/assets/images/wp/2015/03/IMG_2640-1024x283.jpg)](https://dannewman.org/wp-content/uploads/2015/03/IMG_2640.jpg)
 
 Most of that upper-left corner is part of the [Makah Reservation](http://makah.com). To enter certain parts of reservation, like the trailhead out to Shi Shi, you need to pick up a recreation pass. These are for sale in several places around Neah Bay, like the main grocery store, and run $10. Then, you can drive out to the trailhead -- if you are only staying for the day.
 
