@@ -93,7 +93,7 @@ nav .container {
 .nav-links a {
     color: var(--color-text-muted);
     font-size: 0.95rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .nav-links a:hover,
@@ -133,7 +133,7 @@ nav .container {
 
 .hero-text h1 {
     font-size: clamp(2.5rem, 6vw, 3.5rem);
-    font-weight: 700;
+    font-weight: 400;
     line-height: 1.15;
     margin-bottom: 20px;
     letter-spacing: -0.02em;
@@ -190,7 +190,7 @@ section {
 
 .section-title {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 /* Featured Work (Robotics) */
