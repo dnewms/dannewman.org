@@ -1,13 +1,12 @@
 title: dan newman dot org
 description: Communications strategist and creative storyteller based in Ann Arbor, Michigan.
-url: "https://dannewman.org"
-baseurl: ""
+url: " https://dnewms.github.io"
+baseurl: "/dannewman.org"
 
 # Author info
 author:
   name: Dan Newman
   email: dan@dannewman.org
-  linkedin: https://www.linkedin.com/in/newmandan/
 
 # Build settings
 markdown: kramdown
