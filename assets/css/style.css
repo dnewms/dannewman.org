@@ -586,9 +586,8 @@ footer {
 }
 
 .post-header .container {
-    max-width: 720px;
+    max-width: 768px;
     margin: 0 auto;
-    padding: 0 24px;
 }
 
 .post-header h1 {
@@ -602,8 +601,8 @@ footer {
 }
 
 .post-content {
-    padding: 60px 0;
-    max-width: 720px;
+    padding: 60px 24px;
+    max-width: 768px;
     margin: 0 auto;
 }
 
@@ -679,7 +678,7 @@ footer {
 .post-footer {
     padding: 40px 24px;
     border-top: 1px solid var(--color-border);
-    max-width: 720px;
+    max-width: 768px;
     margin: 0 auto;
 }
 
