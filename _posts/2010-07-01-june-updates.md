@@ -5,7 +5,7 @@ date: 2010-07-01 14:34:12
 ---
 
 Apparently computers at public libraries are unequipped with SD card readers, so publishing pictures is still going to be elusive.  However, there might be pictures that show up on this site:
-http://www.thesca.org/umatillanf4/group-home
+[http://www.thesca.org/umatillanf4/group-home](http://www.thesca.org/umatillanf4/group-home)
 
 Tidbits:
 - My toe infection subsided after purchasing new boots.

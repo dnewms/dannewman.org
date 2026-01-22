@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\\"I Don't Need a Bag.\\""
+title: "\"I Don't Need a Bag.\""
 date: 2010-11-28 12:56:38
 ---
 
