@@ -1,0 +1,17 @@
+<nav>
+    <div class="container">
+        <a href="{{ '/' | relative_url }}" class="nav-logo"><span class="blue">dan newman</span> <span class="orange">dot org</span></a>
+        <ul class="nav-links">
+            <li><a href="{{ '/#work' | relative_url }}">Work</a></li>
+            <li><a href="{{ '/#writing' | relative_url }}">Writing</a></li>
+            <li><a href="{{ '/#about' | relative_url }}">About</a></li>
+            <li><a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog' %} class="active"{% endif %}>Blog</a></li>
+            <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+        </ul>
+        <button class="nav-toggle" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+</nav>

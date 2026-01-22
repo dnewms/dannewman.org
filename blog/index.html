@@ -1,0 +1,36 @@
+---
+layout: default
+title: Blog
+description: Thoughts on technology, Ann Arbor, and whatever else.
+permalink: /blog/
+---
+
+<header class="page-header">
+    <div class="container">
+        <h1><span class="blue">Blog</span></h1>
+        <p class="lead">Thoughts on technology, Ann Arbor, and whatever else.</p>
+    </div>
+</header>
+
+<section class="blog-list">
+    <div class="container">
+        {% for post in site.posts %}
+        <article class="post-card">
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+            <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
+            {% if post.tags.size > 0 %}
+            <div class="post-tags">
+                {% for tag in post.tags %}
+                <a href="{{ '/blog/tag/' | append: tag | relative_url }}">{{ tag }}</a>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </article>
+        {% endfor %}
+        
+        {% if site.posts.size == 0 %}
+        <p>No posts yet. Check back soon!</p>
+        {% endif %}
+    </div>
+</section>

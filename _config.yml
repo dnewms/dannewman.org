@@ -1,0 +1,25 @@
+title: dan newman dot org
+description: Communications strategist and creative storyteller based in Ann Arbor, Michigan.
+url: "https://dannewman.org"
+baseurl: ""
+
+# Author info
+author:
+  name: Dan Newman
+  email: dan@dannewman.org
+  linkedin: https://www.linkedin.com/in/newmandan/
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:title/
+
+# Plugins (GitHub Pages supported)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
