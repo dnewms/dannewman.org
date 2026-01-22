@@ -16,7 +16,28 @@ permalink: /blog/
     <div class="container">
         {% for post in site.posts %}
         <article class="post-card">
-            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            {% assign title_words = post.title | split: ' ' %}
+            {% assign word_count = title_words.size %}
+            {% assign half = word_count | divided_by: 2 %}
+            {% if half == 0 %}{% assign half = 1 %}{% endif %}
+            {% assign first_half = '' %}
+            {% assign second_half = '' %}
+            {% for word in title_words %}
+                {% if forloop.index <= half %}
+                    {% if first_half == '' %}
+                        {% assign first_half = word %}
+                    {% else %}
+                        {% assign first_half = first_half | append: ' ' | append: word %}
+                    {% endif %}
+                {% else %}
+                    {% if second_half == '' %}
+                        {% assign second_half = word %}
+                    {% else %}
+                        {% assign second_half = second_half | append: ' ' | append: word %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            <h2><a href="{{ post.url | relative_url }}"><span class="title-first">{{ first_half }}</span> <span class="title-second">{{ second_half }}</span></a></h2>
             <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
             <p class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
             {% if post.tags.size > 0 %}
