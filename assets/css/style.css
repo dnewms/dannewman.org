@@ -614,7 +614,6 @@ footer {
     margin: 0 auto;
 }
 
-.post-header h1,
 .post-header .post-meta {
     max-width: 720px;
 }
@@ -633,10 +632,14 @@ footer {
     padding: 60px 24px;
     max-width: 1100px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .post-content > * {
     max-width: 720px;
+    width: 100%;
 }
 
 .post-content img {
@@ -645,11 +648,6 @@ footer {
 
 .post-content p {
     margin-bottom: 1.5em;
-    color: var(--color-text-muted);
-}
-
-.post-content p:first-of-type {
-    font-size: 1.15rem;
     color: var(--color-text);
 }
 
@@ -717,10 +715,13 @@ footer {
     border-top: 1px solid var(--color-border);
     max-width: 1100px;
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .post-footer .post-nav {
     max-width: 720px;
+    width: 100%;
 }
 
 .post-nav {
