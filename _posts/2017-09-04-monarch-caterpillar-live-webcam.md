@@ -20,28 +20,11 @@ A time lapse where nothing much happens:
 
 *9/17* - The monarchs began to hatch. Chrysalis black with wings, the first emerged in the early afternoon. Unfortunately, as can happen with any change in life (a reason to fear it, no doubt), complications arose. From what we could discern, it spent too much time attempting to break out, and its wings dried too soon. The second hatched in the middle of the night, as we woke up to find it hanging at the top of its jar. After some falls as it got used to having just a handful of feet, it sat drying its wings on a nearby bush. Storms eventually rolled through, but no signs that they stopped this Monarch from beginning the journey. Fly above the cars and below the birds, pleasant Mexico awaits you.
 
-<div class="gallery" markdown="0">
-<a href="#img1" id="img1"><img src="/assets/images/wp/2017/09/cam_1_20170905_083156_458.jpg" alt="Caterpillar stage"><span class="gallery-close"></span></a>
-<a href="#img2" id="img2"><img src="/assets/images/wp/2017/09/cam_1_20170905_093156_598.jpg" alt="Chrysalis formation"><span class="gallery-close"></span></a>
-<a href="#img3" id="img3"><img src="/assets/images/wp/2017/09/cam_1_20170905_103156_722.jpg" alt="Completed chrysalis"><span class="gallery-close"></span></a>
-<a href="#img4" id="img4"><img src="/assets/images/wp/2017/10/DSC03518-e1507332708125.jpg" alt="Chrysalis with gold seam"><span class="gallery-close"></span></a>
-<a href="#img5" id="img5"><img src="/assets/images/wp/2017/10/DSC03526.jpg" alt="Butterfly drying wings"><span class="gallery-close"></span></a>
-<a href="#img6" id="img6"><img src="/assets/images/wp/2017/10/DSC03531-e1507332748966.jpg" alt="Butterfly on plant"><span class="gallery-close"></span></a>
+<div class="gallery">
+<a href="/assets/images/wp/2017/09/cam_1_20170905_083156_458.jpg"><img src="/assets/images/wp/2017/09/cam_1_20170905_083156_458.jpg" alt="Caterpillar stage"></a>
+<a href="/assets/images/wp/2017/09/cam_1_20170905_093156_598.jpg"><img src="/assets/images/wp/2017/09/cam_1_20170905_093156_598.jpg" alt="Chrysalis formation"></a>
+<a href="/assets/images/wp/2017/09/cam_1_20170905_103156_722.jpg"><img src="/assets/images/wp/2017/09/cam_1_20170905_103156_722.jpg" alt="Completed chrysalis"></a>
+<a href="/assets/images/wp/2017/10/DSC03518-e1507332708125.jpg"><img src="/assets/images/wp/2017/10/DSC03518-e1507332708125.jpg" alt="Chrysalis with gold seam"></a>
+<a href="/assets/images/wp/2017/10/DSC03526.jpg"><img src="/assets/images/wp/2017/10/DSC03526.jpg" alt="Butterfly drying wings"></a>
+<a href="/assets/images/wp/2017/10/DSC03531-e1507332748966.jpg"><img src="/assets/images/wp/2017/10/DSC03531-e1507332748966.jpg" alt="Butterfly on plant"></a>
 </div>
-
-<script>
-// Close lightbox when clicking anywhere or pressing Escape
-document.querySelectorAll('.gallery a').forEach(function(a) {
-    a.addEventListener('click', function(e) {
-        if (location.hash === '#' + this.id) {
-            e.preventDefault();
-            history.pushState('', document.title, location.pathname + location.search);
-        }
-    });
-});
-document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && location.hash.startsWith('#img')) {
-        history.pushState('', document.title, location.pathname + location.search);
-    }
-});
-</script>

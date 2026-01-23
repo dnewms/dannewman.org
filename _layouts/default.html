@@ -22,5 +22,78 @@
     {{ content }}
     
     {% include footer.html %}
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <span class="lightbox-nav lightbox-prev">&#10094;</span>
+        <span class="lightbox-nav lightbox-next">&#10095;</span>
+        <img src="" alt="">
+    </div>
+    <script>
+    (function() {
+        var lightbox = document.getElementById('lightbox');
+        if (!lightbox) return;
+
+        var lightboxImg = lightbox.querySelector('img');
+        var closeBtn = lightbox.querySelector('.lightbox-close');
+        var prevBtn = lightbox.querySelector('.lightbox-prev');
+        var nextBtn = lightbox.querySelector('.lightbox-next');
+        var galleryImages = [];
+        var currentIndex = 0;
+
+        // Find all gallery images
+        document.querySelectorAll('.gallery a').forEach(function(a, i) {
+            galleryImages.push(a.href);
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                currentIndex = i;
+                openLightbox(a.href);
+            });
+        });
+
+        function openLightbox(src) {
+            lightboxImg.src = src;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            updateNav();
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function updateNav() {
+            prevBtn.style.display = galleryImages.length > 1 ? 'block' : 'none';
+            nextBtn.style.display = galleryImages.length > 1 ? 'block' : 'none';
+        }
+
+        function showPrev() {
+            currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentIndex];
+        }
+
+        function showNext() {
+            currentIndex = (currentIndex + 1) % galleryImages.length;
+            lightboxImg.src = galleryImages[currentIndex];
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        prevBtn.addEventListener('click', function(e) { e.stopPropagation(); showPrev(); });
+        nextBtn.addEventListener('click', function(e) { e.stopPropagation(); showNext(); });
+
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) closeLightbox();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') showPrev();
+            if (e.key === 'ArrowRight') showNext();
+        });
+    })();
+    </script>
 </body>
 </html>
