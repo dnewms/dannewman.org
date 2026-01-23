@@ -30,12 +30,18 @@ A time lapse where nothing much happens:
 </div>
 
 <script>
+// Close lightbox when clicking anywhere or pressing Escape
 document.querySelectorAll('.gallery a').forEach(function(a) {
     a.addEventListener('click', function(e) {
         if (location.hash === '#' + this.id) {
             e.preventDefault();
-            history.pushState('', document.title, location.pathname);
+            history.pushState('', document.title, location.pathname + location.search);
         }
     });
+});
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && location.hash.startsWith('#img')) {
+        history.pushState('', document.title, location.pathname + location.search);
+    }
 });
 </script>
