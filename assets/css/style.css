@@ -125,6 +125,12 @@ a:hover {
     color: var(--color-orange);
 }
 
+.nav-separator {
+    color: var(--color-border);
+    font-weight: 300;
+    user-select: none;
+}
+
 .nav-toggle {
     display: none;
     flex-direction: column;
@@ -796,6 +802,10 @@ footer {
 
     .nav-links.open {
         display: flex;
+    }
+
+    .nav-separator {
+        display: none;
     }
 
     .nav-toggle {

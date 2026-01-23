@@ -5,8 +5,9 @@
             <li><a href="{{ '/#work' | relative_url }}">Work</a></li>
             <li><a href="{{ '/#writing' | relative_url }}">Writing</a></li>
             <li><a href="{{ '/#about' | relative_url }}">About</a></li>
-            <li><a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog' %} class="active"{% endif %}>Blog</a></li>
             <li><a href="{{ '/#contact' | relative_url }}">Contact</a></li>
+            <li class="nav-separator" aria-hidden="true">|</li>
+            <li><a href="{{ '/blog/' | relative_url }}"{% if page.url contains '/blog' %} class="active"{% endif %}>Blog</a></li>
         </ul>
         <button class="nav-toggle" aria-label="Toggle menu">
             <span></span>
