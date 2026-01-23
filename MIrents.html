@@ -6,8 +6,11 @@
     <script src="https://d3js.org/d3.v3.min.js"></script>
     <script src="https://d3js.org/topojson.v1.min.js"></script>
     <style>
-        #map { width: 50%; margin: 0 auto; }
-        body { font: 12px sans-serif; }
+        * { box-sizing: border-box; }
+        body { font: 14px/1.6 sans-serif; margin: 0; padding: 20px; max-width: 900px; margin: 0 auto; }
+        h1, h2, h3 { margin-top: 1.5em; }
+        h1 { margin-top: 0; }
+        #map { width: 100%; max-width: 800px; margin: 20px auto; }
         path { stroke-width: 0.25px; stroke: white; fill: #999; cursor: pointer; }
         path.q0-11 { fill: #313695; }
         path.q1-11 { fill: #4575b4; }
@@ -22,90 +25,67 @@
         path.q10-11 { fill: #a50026; }
         div.tooltip { position: absolute; background-color: white; border: 1px solid black;
                      color: black; font-weight: bold; padding: 4px 8px; display: none; }
-        .infotitle { width: 50%; margin: 5px auto; }
-        .intro { width: 50%; margin: 5px auto; }
         .blue { color: #fff; background-color: rgb(49, 54, 149); padding: 5px; }
         .red { color: #fff; background-color: rgb(165, 0, 38); padding: 5px; }
-        .key { font-size: 90%; }
+        .key { display: flex; align-items: center; gap: 8px; }
         .key-img { vertical-align: middle; }
         .tiptext { font-weight: normal; }
-        .standout { float: right; }
-        .unemp { float: right; width: 50%; margin: 0 auto; }
-        .footer { font-style: italic; }
+        .footer { font-style: italic; margin-top: 2em; color: #666; }
+        ul { margin: 0.5em 0; }
+        li { margin: 0.25em 0; }
     </style>
 </head>
 <body>
     <h1>Median Rents in Michigan</h1>
-    <h2>Median Rents in Michigan, 2014</h2>
+    <p><em>2014 American Community Survey data from the United States Census Bureau</em></p>
 
     <img src="apt.png" alt="Apartment by Nicholas Menghini from the Noun Project">
 
-    <p>data from <a href="http://factfinder.census.gov">2014 American Community Survey</a>,
-    United States Census Bureau</p>
+    <p>Contemporary urban housing challenges involve finding affordable accommodations
+    in desirable locations. Rent variations across short distances can be substantial.
+    The following interactive map displays median rents organized by
+    <a href="https://en.wikipedia.org/wiki/ZIP_Code_Tabulation_Area">ZCTAs</a>.</p>
 
-    <div class="intro">
-        <p>Contemporary urban housing challenges involve finding affordable accommodations
-        in desirable locations. Rent variations across short distances can be substantial.
-        The following interactive map displays median rents organized by
-        <a href="https://en.wikipedia.org/wiki/ZIP_Code_Tabulation_Area">ZCTAs</a>.</p>
-
-        <p><strong>Key:</strong> less expensive <img src="key.png" alt="color scale">
-        more expensive</p>
-    </div>
+    <p class="key"><strong>Key:</strong> less expensive <img src="key.png" alt="color scale"> more expensive</p>
 
     <div id="map"></div>
 
-    <div class="infotitle">
-        <h3>Notable rent disparities</h3>
-        <ul>
-            <li><a href="https://en.wikipedia.org/wiki/West_Bloomfield_Township,_Michigan">
-            West Bloomfield</a> (48323): $1583
-                <ul>
-                    <li><a href="https://en.wikipedia.org/wiki/Pontiac,_Michigan">Pontiac</a>
-                    (48302): $831</li>
-                    <li><a href="https://en.wikipedia.org/wiki/Orchard_Lake_Village,_Michigan">
-                    Orchard Lake</a> (48324): $872</li>
-                    <li><a href="https://en.wikipedia.org/wiki/Walled_Lake,_Michigan">Walled Lake</a>
-                    (48390): $848</li>
-                </ul>
-            </li>
-            <li><a href="https://en.wikipedia.org/wiki/Novi,_Michigan">Novi</a> (48374): $1387
-                <ul>
-                    <li><a href="https://en.wikipedia.org/wiki/South_Lyon,_Michigan">South Lyon</a>
-                    (48178): $696</li>
-                    <li><a href="https://en.wikipedia.org/wiki/Wixom,_Michigan">Wixom</a>
-                    (48393): $570</li>
-                    <li><a href="https://en.wikipedia.org/wiki/Northville,_Michigan">Northville</a>
-                    (48167): $882</li>
-                </ul>
-            </li>
-            <li><a href="https://en.wikipedia.org/wiki/Ada_Township%2C_Michigan">Ada</a> (49301): $1149
-                <ul>
-                    <li><a href="https://en.wikipedia.org/wiki/Grand_Rapids,_Michigan">Grand Rapids</a>
-                    (49546): $702</li>
-                    <li>North Grand Rapids (49525): $659</li>
-                    <li><a href="https://en.wikipedia.org/wiki/Plainfield_Township,_Kent_County,_Michigan">
-                    Belmont</a> (49306): $508</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
+    <h3>Notable rent disparities</h3>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/West_Bloomfield_Township,_Michigan">West Bloomfield</a> (48323): $1583
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Pontiac,_Michigan">Pontiac</a> (48302): $831</li>
+                <li><a href="https://en.wikipedia.org/wiki/Orchard_Lake_Village,_Michigan">Orchard Lake</a> (48324): $872</li>
+                <li><a href="https://en.wikipedia.org/wiki/Walled_Lake,_Michigan">Walled Lake</a> (48390): $848</li>
+            </ul>
+        </li>
+        <li><a href="https://en.wikipedia.org/wiki/Novi,_Michigan">Novi</a> (48374): $1387
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/South_Lyon,_Michigan">South Lyon</a> (48178): $696</li>
+                <li><a href="https://en.wikipedia.org/wiki/Wixom,_Michigan">Wixom</a> (48393): $570</li>
+                <li><a href="https://en.wikipedia.org/wiki/Northville,_Michigan">Northville</a> (48167): $882</li>
+            </ul>
+        </li>
+        <li><a href="https://en.wikipedia.org/wiki/Ada_Township%2C_Michigan">Ada</a> (49301): $1149
+            <ul>
+                <li><a href="https://en.wikipedia.org/wiki/Grand_Rapids,_Michigan">Grand Rapids</a> (49546): $702</li>
+                <li>North Grand Rapids (49525): $659</li>
+                <li><a href="https://en.wikipedia.org/wiki/Plainfield_Township,_Kent_County,_Michigan">Belmont</a> (49306): $508</li>
+            </ul>
+        </li>
+    </ul>
 
-    <div class="infotitle">
-        <h3>Michigan's unique situation</h3>
-        <p>Michigan differs from other states in that top rents often occur in suburban
-        centers rather than urban cores, affecting both Detroit and Grand Rapids. University
-        towns show moderate rents, possibly constrained by student purchasing capacity.</p>
-    </div>
+    <h3>Michigan's unique situation</h3>
+    <p>Michigan differs from other states in that top rents often occur in suburban
+    centers rather than urban cores, affecting both Detroit and Grand Rapids. University
+    towns show moderate rents, possibly constrained by student purchasing capacity.</p>
 
-    <div class="infotitle">
-        <h3>Unemployment correlation</h3>
-        <p>The unemployment map reveals a correlation between lower rents and higher
-        joblessness. The Upper Peninsula exhibits low rents alongside spotty employment,
-        while Detroit and northeast Michigan follow similar patterns.</p>
-    </div>
+    <h3>Unemployment correlation</h3>
+    <p>The unemployment map reveals a correlation between lower rents and higher
+    joblessness. The Upper Peninsula exhibits low rents alongside spotty employment,
+    while Detroit and northeast Michigan follow similar patterns.</p>
 
-    <p class="footer">For creation methodology, <a href="/blog/2016/04/25/creating-a-choropleth-using-census-data.html">see here</a>.</p>
+    <p class="footer">For creation methodology, <a href="/2016/04/creating-a-choropleth-using-census-data/">see here</a>.</p>
 
     <script>
         var width = 800, height = 800;

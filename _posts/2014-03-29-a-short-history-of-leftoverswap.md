@@ -48,14 +48,10 @@ On this frontier is where people have intense reactions, as well. These are the 
 
 A few other random lessons:
 
-	- Reporters are extremely nice - especially the Japanese who gave me a pizza and a mousepad of Mt. Fuji.
-
-	- You never know where posting ideas on the Internet can lead.
-
-	- Making an app is hard, and will take you at least twice as long as you expect.
-
-	- If there seem to be laws against what you're doing, do it anyway, just to see if anything happens. This does not include murder or any of the bad ones.
-
-	- All those "Featured in x publication, x website, and x show" that companies tend to list are meaningless.
+- Reporters are extremely nice - especially the Japanese who gave me a pizza and a mousepad of Mt. Fuji.
+- You never know where posting ideas on the Internet can lead.
+- Making an app is hard, and will take you at least twice as long as you expect.
+- If there seem to be laws against what you're doing, do it anyway, just to see if anything happens. This does not include murder or any of the bad ones.
+- All those "Featured in x publication, x website, and x show" that companies tend to list are meaningless.
 
 And that's a short history of LeftoverSwap.

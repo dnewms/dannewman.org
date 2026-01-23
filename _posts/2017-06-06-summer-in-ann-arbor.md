@@ -8,12 +8,19 @@ Ann Arbor exhales as U-Haul trucks and packed SUVs jump curbs out of town. The s
 
 After the exodus, those left behind get to stretch out. 
 
-![Huron River](/assets/images/wp/2017/06/huronriver.gif) Island Park on the Huron River.
+<figure>
+<img src="/assets/images/wp/2017/06/huronriver.gif" alt="Huron River">
+<figcaption>Island Park on the Huron River.</figcaption>
+</figure>
+
 The plants are the first. Not to startle, the flowers begin with hints of green. Then dark purples, lavenders, blues, yellows, whites, and on until winter again. Trees move more cautiously through time, not quite convinced of the spring until the charcoal smoke of Memorial Day and haggling voices from garage sales reach and rattle their buds.
 
 Streets are left so empty that many close, and, sensing the open commercial space, vagrant artists spot an opportunity to ply their wares and unload conversion vans full of homemade goods. As they have been doing it for so long, the city acquiesced and issued proper permits. The children of the original artists, not wanting to associate with their parents, began a competing art fair. This continued for several generations, which is why today there are four different fairs in Ann Arbor – all at the same time. 
 
-![Water Hill Music Festival](/assets/images/wp/2017/06/waterhill.png) Townies gather on the fringes of the Water Hill Music Festival.
+<figure>
+<img src="/assets/images/wp/2017/06/waterhill.png" alt="Water Hill Music Festival">
+<figcaption>Townies gather on the fringes of the Water Hill Music Festival.</figcaption>
+</figure>
 
 Along other closed streets, musicians or movies play to crowds on a lawn. Attendees pray against mosquito and thunderstorm. Children drunk on summer with hands and mouths covered in sugar run free while adults are penned in to drink chardonnay and sit in flimsy chairs next to tilted tables. “Where’s your brother?” a mother will listlessly say across the waist-high barricade as a Pixar movie from five years ago attempts to drown out humid conversations.
 
