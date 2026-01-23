@@ -13,7 +13,7 @@ That's the equivalent of every fifth generation of humans living roughly 600 yea
 Find out [more about Monarchs](https://www.fs.usda.gov/wildflowers/pollinators/Monarch_Butterfly/migration/index.shtml).
 
 A time lapse where nothing much happens:
-<div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/237162496?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Monarch time lapse"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/237162496?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Monarch time lapse"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 **Updates:**
 *9/5* - In less than an hour, one caterpillar formed its chrysalis, and the second quickly followed suit. They leave their heads outside the chrysalis -- I'll leave them there in case they want them once they come out. Repositioned camera. Now we wait.
