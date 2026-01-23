@@ -5,7 +5,7 @@ date: 2016-11-13
 tags: [environment, government]
 ---
 
-![Nestlé water](/dannewman.org/assets/images/wp/2016/11/nestle-blue-cup.png)
+![Nestlé water](/assets/images/wp/2016/11/nestle-blue-cup.png)
 
 Nestlé Waters North America runs an Ice Mountain bottled water plant in Michigan. The company has asked the Michigan Department of Environmental Quality (MDEQ) to increase its current water withdrawal limit of 150 gallons per minute (GPM) to 400 GPM at an aquifer in Evart. The company will truck the water to its plant in Stanwood, where it will be packaged up and sold.
 
@@ -19,7 +19,7 @@ For this water, Nestlé pays... almost nothing. Michigan doesn't charge for wate
 
 Meanwhile, Flint residents are still paying some of the highest water rates in the country for water they can't drink.
 
-![Lake Michigan](/dannewman.org/assets/images/wp/2016/11/Lake-Michigan.png)
+![Lake Michigan](/assets/images/wp/2016/11/Lake-Michigan.png)
 
 ## The Environmental Impact
 
@@ -27,7 +27,7 @@ The aquifer in question feeds the headwaters of two coldwater trout streams. Loc
 
 Coldwater trout streams are increasingly rare and precious as climate change warms Michigan's waters. Once damaged, they don't come back.
 
-![Ecological effects of increased pumping](/dannewman.org/assets/images/wp/2016/11/ecoeffects.png)
+![Ecological effects of increased pumping](/assets/images/wp/2016/11/ecoeffects.png)
 
 ## What You Can Do
 

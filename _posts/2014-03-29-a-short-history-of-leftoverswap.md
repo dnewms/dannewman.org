@@ -8,7 +8,7 @@ As I craned my neck to balance out the pain from sleeping on a couch in my frien
 
 Little did I know how this email would dictate my life for the next several months. I folded up my sheets, set them in my designated corner, and headed back to what was now the office couch, formerly bed.
 
-![A snapshot of some leftover food posts](/dannewman.org/assets/images/wp/2014/03/sampleposts.png)
+![A snapshot of some leftover food posts](/assets/images/wp/2014/03/sampleposts.png)
 
 ## The past
 
@@ -36,7 +36,7 @@ We launched, I sent out an announcement to our email list, and we waited. We got
 
 Overall, we have had about 10,000 downloads, and 90% of those actually created an account. We now have a stockpile of thousands of leftover food photos. As to what we'll do with them, who knows - maybe one of those giant pictures made up of thousands of thumbnails. A giant half-eaten pizza, made out of thousands of half-eaten pizza photos.
 
-![Website traffic over three months after the launch](/dannewman.org/assets/images/wp/2014/03/traffic.png)
+![Website traffic over three months after the launch](/assets/images/wp/2014/03/traffic.png)
 
 The fervor of the launch has died down, but posts still accumulate. We've both had other projects and circumstances carry us away from this experiment. I'm open to suggestions on where to carry it next, though -- we have yet to put out an Android app, though we have some fundamental code written (or so I hear). A web-based version would also be awesome. Perhaps open-sourcing and letting the community take control is the next step.
 

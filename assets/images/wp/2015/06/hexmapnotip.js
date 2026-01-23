@@ -131,7 +131,7 @@ d3.helper.tooltip = function(accessor){
   //**********************************************************************************
   //********  IMPORT DATA AND REFORMAT ***********************************************
   //**********************************************************************************
-  d3.csv('http://www.dannewman.org/wp-content/uploads/2015/06/schoolRawV.csv', function (error, schools) {
+  d3.csv('/assets/images/wp/2015/06/schoolRawV.csv', function (error, schools) {
 
     function reformat (array) {
       var data = [];

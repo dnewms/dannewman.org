@@ -4,7 +4,7 @@ title: "Four-Story Limit"
 date: 2013-03-04 19:07:43
 ---
 
-Another pattern from [Christopher Alexander](https://dannewman.org/2012/10/christopher-alexanders-timeless-way-of-building/)'s "A Pattern Language" is the four-story limit:
+Another pattern from [Christopher Alexander](/2012/10/christopher-alexanders-timeless-way-of-building/)'s "A Pattern Language" is the four-story limit:
 > In any urban area, no matter how dense, keep the majority of buildings four stories high or less. It is possible that certain buildings should exceed this limit, but they should never be buildings for human habitation.
 
 You may think it's crazy, but Alexander's reasoning is just the opposite, being that living high up makes us crazy:

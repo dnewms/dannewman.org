@@ -8,7 +8,7 @@ I originally thought of FarmPorter for a summer grant, and then a summer project
 
 There are a few aspects of the idea, and FarmPorter would probably be better if simplified to perform one of the following:
 
-![FarmPorter concept](/dannewman.org/assets/images/wp/2010/04/farmporter-googsites.gif)
+![FarmPorter concept](/assets/images/wp/2010/04/farmporter-googsites.gif)
 
 	-  Home delivery of CSA shares
 
@@ -20,4 +20,4 @@ There are a few aspects of the idea, and FarmPorter would probably be better if 
 
 	- Marketing CSAs beyond farmers markets
 
-Please see [this PDF](/dannewman.org/assets/images/wp/2010/04/farmporter-idea.pdf) for more information.
+Please see [this PDF](/assets/images/wp/2010/04/farmporter-idea.pdf) for more information.
